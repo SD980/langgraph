@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans KR", "Pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1f1c2c, #0b0d1d 60%);
+  color: #f5f6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 160px;
+  gap: 2rem;
+  padding: 2rem;
+  width: min(900px, 100%);
+}
+
+.game-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.scoreboard div {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.75rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.scoreboard .label {
+  display: block;
+  font-size: 0.8rem;
+  color: #c2c7ff;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+#board {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  background: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, #6d5dfc, #46c2ff);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #b7bffb;
+  text-align: center;
+}
+
+.next-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.next-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+#next {
+  width: 100%;
+  display: block;
+  background: #030712;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 720px) {
+  .game-shell {
+    grid-template-columns: 1fr;
+  }
+}
