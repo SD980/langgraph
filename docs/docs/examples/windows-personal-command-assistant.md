@@ -316,7 +316,24 @@ if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
 ```
 
-## 실행 방법
+## 빠른 실행 요약
+아래 순서를 그대로 따라 하면 GUI가 바로 실행됩니다.
+
+1. **Python 3.10+ 설치** – [python.org](https://www.python.org/downloads/windows/)에서 Windows 설치 패키지를 받아 설치합니다. 설치 중 "Add Python to PATH" 옵션을 체크하면 이후 명령 실행이 간편합니다.
+2. **저장소 내려받기** – 이 저장소를 ZIP으로 내려받아 압축을 해제하거나 `git clone`으로 복제합니다.
+3. **PowerShell 열기** – 프로젝트 루트(예: `C:\Users\me\langgraph`)에서 PowerShell을 실행합니다.
+4. **프로그램 실행** – 아래 두 방법 중 편한 명령 하나를 입력합니다.
+   ```powershell
+   # 방법 1: 모듈 실행(권장)
+   py -m examples.windows_personal_command_assistant
+
+   # 방법 2: 스크립트 직접 실행
+   py examples\windows_personal_command_assistant.py
+   ```
+5. **명령 입력** – Tkinter GUI 창이 뜨면 "크롬 켜줘"와 같이 원하는 명령을 입력한 뒤 Enter 또는 **실행** 버튼을 누릅니다.
+6. **결과 확인** – 하단 "실행 결과" 영역에 어떤 명령이 수행됐는지 로그가 누적됩니다.
+
+## 실행 방법 (상세)
 1. Windows 11에서 Python 3.10+을 설치합니다.
 2. 저장소 루트에서 다음 명령으로 프로그램을 실행합니다.
    ```powershell
